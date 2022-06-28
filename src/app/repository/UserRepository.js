@@ -1,9 +1,8 @@
-const modelUser = require('../models');
+const models = require('../models');
 
 class UserRepository {
   async create(payload) {
-    const result = await modelUser.user.create(payload);
-    console.log(result)
+    const result = await models.user.create(payload);
     return result;
   }
 }
