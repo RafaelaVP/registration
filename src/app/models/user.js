@@ -22,27 +22,7 @@ module.exports = (sequelize, DataTypes) => {
           type: DataTypes.STRING,
           allowNull: false,
         },
-        deletedBy: {
-          type: DataTypes.STRING,
-          allowNull: true,
-          validate: {
-              notEmpty: true
-          }
-      },
-      createdBy: {
-          type: DataTypes.STRING,
-          allowNull: true,
-          validate: {
-              notEmpty: true
-          }
-      },
-      updatedBy: {
-          type: DataTypes.STRING,
-          allowNull: true,
-          validate: {
-              notEmpty: true
-          }
-      }
+      
   }, {
       tableName: "user"
   })
