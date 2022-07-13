@@ -10,7 +10,6 @@ class UserController {
             return res.status(400).json(error);
         }
     }
-
     async findAll(req,res) {
         try {
             const result = await UserService.findAll(req.query)
@@ -19,7 +18,6 @@ class UserController {
             return res.status(400).json(error);
         }
     }
-
     async update(req, res) {
         try {
             const { id } = req.params;
@@ -30,7 +28,6 @@ class UserController {
             return res.status(400).json(error);
         }
     }
-
     async delete(req, res) {
         try {
             const { id } = req.params;
@@ -40,7 +37,6 @@ class UserController {
             return res.status(400).json(error);
         }
     }
-
     async findByid(req, res) {
         try {
             const { id } = req.params;

@@ -10,7 +10,6 @@ class CarsController {
             return res.status(400).json(error);
         }
     }
-
     async findAll(req, res) {
         try {
             const result = await CarsService.findAll(req.query)
@@ -19,7 +18,6 @@ class CarsController {
             return res.status(400).json(error);
         }
     }
-
     async update(req, res) {
         try {
             const { id } = req.params;
@@ -30,7 +28,6 @@ class CarsController {
             return res.status(400).json(error);
         }
     }
-
     async delete(req, res) {
         try {
             const { id } = req.params;
@@ -38,6 +35,15 @@ class CarsController {
             return res.status(200).json({});
         } catch (error) {
             return res.status(400).json(error)
+        }
+    }
+    async findById(req, res) {
+        try {
+            const { id } = req.params;
+            const result = await CarsService.findById(id);
+            return res.status(200).json(result);
+        } catch (error) {
+            return res.status(400).json(error);
         }
     }
 }

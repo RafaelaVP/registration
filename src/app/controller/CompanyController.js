@@ -41,6 +41,17 @@ class CompanyController {
         }
     }
 
+    async findByid(req, res) {
+        try {
+            const { id } = req.params;
+            const result = await CompanyService.findById(id);
+        return res.status(200).json(result);
+        } catch (error) {
+            return res.status(400).json(error);
+        }
+        
+    }
+
 }
 
 module.exports = new CompanyController();

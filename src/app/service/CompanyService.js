@@ -20,6 +20,11 @@ class CompanyService {
         const result = await CompanyRepository.delete(id);
         return result;
     }
+
+    async findById(id) {
+        const result =  await CompanyRepository.findById(id);
+        return result;
+    }
 }
 
 module.exports = new CompanyService();

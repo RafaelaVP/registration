@@ -22,7 +22,7 @@ class UserService {
     }
 
     async findById(id) {
-        const result = await UserRepository.findOne(id)
+        const result = await UserRepository.findById(id)
         return result;
     }
 }
